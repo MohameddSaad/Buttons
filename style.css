@@ -1,0 +1,98 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header
+{
+    height: 100vh;
+    text-align: center;
+}
+h1
+{
+    padding: 25px 0px;
+    color: #000;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.btn-container
+{
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-evenly;
+    border: 2px solid #a9a9a9;
+    box-shadow: 0px 0px 5px #a9a9a9bb;
+    border-radius: 10px;
+}
+/* ------------------The main CSS for lovely buttons------------------------- */
+button
+{
+    background-color: transparent;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    border: 3px solid #000;
+    position: relative;
+    overflow: hidden;
+    transition: color 1s;
+}
+.bg
+{
+    color:#fff;
+}
+button::after
+{
+    content: ' ';
+    position: absolute;
+    height: 0%;
+    width: 100%;
+    background-color: #000;
+    z-index: -1;
+    transition: all 0.8s;
+}
+.normal:hover
+{
+    color: #fff;
+    
+}
+.bg:hover
+{
+    color: #000;
+}
+.bg::after
+{
+    height: 190%;
+}
+.normal:hover::after
+{
+    height: 190%;
+}
+.bg-1::after , .normal-1::after
+{
+    top: 0;
+    left: 0;
+    border-radius: 0 0 50%  50%;
+}
+.bg-1:hover::after
+{
+    top: -190%;
+}
+.bg-2::after , .normal-2::after
+{
+    bottom:  0%;
+    left: 0;
+    border-radius:50%  50%  0 0 ;
+}
+.bg-2:hover::after
+{
+    bottom: -190%;
+}
+/* --------------------------------------------------------------------------- */
